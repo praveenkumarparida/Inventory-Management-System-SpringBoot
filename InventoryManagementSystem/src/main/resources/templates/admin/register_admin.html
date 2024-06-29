@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Page</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <header id="header">
+        <div class="container">
+            <h1 id="head-in" style="display: inline;">INVO~MANAGE</h1>
+            <nav>
+                <ul>
+                    <li><a href="/admin/Admin_dashBoard">Products</a></li>
+                    <li><a href="/admin/user">Users</a></li>
+                    <!-- <li><a href="register.html">Register</a></li> -->
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <br><br>
+
+    <div class="container-div">
+        <form action="/admin/addDBAdmin" method="post">
+            <h2>Admin_Register</h2><br>
+            <div class="form-control">
+                <label for="fullname">Full Name</label>
+                <input type="text" id="fullname" name="fullname" placeholder="Enter Your First_Name" required>
+            </div>
+            <div class="form-control">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email"  placeholder="Enter Your Email_ID" required>
+            </div>
+            <div class="form-control">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username"  placeholder="Enter Your User_Name" required>
+            </div>
+            <div class="form-control">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter Your password" required>
+            </div>
+            <button name="button" value="button" type="submit">Register</button>
+            <p>if Already have an account? <a href="/user/login">Login</a></p>
+        </form>
+    </div>
+</body>
+</html>

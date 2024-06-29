@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Page</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/cart.css">
+</head>
+<body>
+    <header id="header">
+        <div class="container">
+            <h1 id="head-in" style="display: inline;">INVO~MANAGE</h1>
+            <nav>
+                <ul>
+                    <li><a href="/admin/Admin_dashBoard">Products</a></li>
+                    <li><a href="/admin/user">Users</a></li>
+                    <!-- <li><a href="register.html">Register</a></li> -->
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <br><br>
+    <br>
+
+    <center>
+        <h1>USERS</h1>
+        <table border="1px" style="color: azure;">
+            <thead>
+            <tr><td id="username" name="username">User Name</td><td id="fullname" name="fullname">Full Name</td><td id="email" name="email">Email</td></tr>
+            </thead>
+            <tbody>
+            <tr th:each="dataItem : ${dataList}">
+                <td th:text="${dataItem.username}"></td>
+                <td th:text="${dataItem.fullname}"></td>
+                <td th:text="${dataItem.email}"></td>
+            </tr>
+            </tbody>
+
+        <br>
+        <!-- <button>Add to cart</button> -->
+        </center>
+</body>
+</html>
